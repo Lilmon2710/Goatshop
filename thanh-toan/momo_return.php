@@ -2,9 +2,11 @@
 session_start();
 include(__DIR__ . '/../includes/db_connect.php');
 
-$partnerCode = "MOMOBKUN20180529";
-$accessKey = "klm05TvNCyandK7G";
-$secretKey = "at67qH6mk8w5Y1nAwMoYK1801C7L1w2u";
+// Load MoMo Payment Config
+$momoConfig = require_once(__DIR__ . '/momo_config.php');
+$partnerCode = $momoConfig['PartnerCode'];
+$accessKey = $momoConfig['AccessKey'];
+$secretKey = $momoConfig['SecretKey'];
 
 if (isset($_GET['partnerCode'])) {
     $partnerCode = $_GET['partnerCode'];
@@ -21,6 +23,7 @@ if (isset($_GET['partnerCode'])) {
     $extraData = $_GET['extraData'];
     $m2signature = $_GET['signature'];
 
+    // Signature theo đúng format của MoMo (thứ tự này là chuẩn)
     $rawHash = "accessKey=" . $accessKey . "&amount=" . $amount . "&extraData=" . $extraData . "&message=" . $message . "&orderId=" . $orderId . "&orderInfo=" . $orderInfo . "&orderType=" . $orderType . "&partnerCode=" . $partnerCode . "&payType=" . $payType . "&requestId=" . $requestId . "&responseTime=" . $responseTime . "&resultCode=" . $resultCode . "&transId=" . $transId;
 
     $signature = hash_hmac("sha256", $rawHash, $secretKey);
