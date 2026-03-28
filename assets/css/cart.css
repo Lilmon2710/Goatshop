@@ -1,0 +1,175 @@
+/* ====== GIỎ HÀNG ====== */
+.cart-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cart-container h2 {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #000000;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.empty-cart {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.cart-table th {
+  background-color: #f7f7f7;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+.cart-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-info img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn-continue {
+  background: var(--primary, #FF3E00);
+  padding: 12px 18px;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-continue:hover {
+  background: var(--primary-dark, #cc3200);
+  transform: translateY(-2px);
+}
+
+.cart-summary {
+  text-align: right;
+}
+
+.cart-summary .total {
+  font-size: 22px;
+  color: red;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.btn-checkout {
+  text-decoration: none;
+  margin-top: 10px;
+  background: var(--primary, #FF3E00);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-checkout:hover {
+  background: var(--primary-dark, #cc3200);
+  transform: translateY(-2px);
+}
+
+.remove-btn {
+  color: #888;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  color: red;
+}
+
+/* QTY CONTROLS */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: #f1f1f1;
+  padding: 5px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.qty-btn:hover {
+  background: #444;
+}
+
+.qty-input {
+  width: 40px;
+  border: none;
+  background: transparent;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  appearance: textfield; /* Remove arrows in Firefox */
+  outline: none;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Remove arrows in Chrome/Safari */
+  margin: 0;
+}

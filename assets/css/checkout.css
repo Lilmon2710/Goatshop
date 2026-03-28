@@ -1,0 +1,355 @@
+/* ===== CÀI ĐẶT CHUNG ===== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* ===== BỐ CỤC 3 CỘT CHÍNH ===== */
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Cho phép xuống hàng trên di động */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    /* Khoảng cách giữa các cột */
+}
+
+/* Kiểu chung cho cả 3 cột */
+.checkout-column {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Phân chia độ rộng 3 cột */
+.shipping-info {
+    flex: 2;
+    /* Cột thông tin rộng nhất */
+    min-width: 320px;
+    /* Đảm bảo không bị bóp quá nhỏ */
+}
+
+.payment-policy {
+    flex: 1.5;
+    /* Cột thanh toán rộng vừa */
+    min-width: 300px;
+}
+
+.order-summary {
+    flex: 1.5;
+    /* Cột đơn hàng hẹp nhất */
+    min-width: 300px;
+    height: fit-content;
+    /* Chỉ cao bằng nội dung bên trong */
+}
+
+.column-title {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* ===== CỘT 1: FORM THÔNG TIN ===== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Quan trọng để padding không làm vỡ layout */
+    font-size: 1em;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #FF3E00;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 62, 0, 0.1);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ===== CỘT 2: THANH TOÁN & CHÍNH SÁCH ===== */
+.payment-section,
+.policy-section {
+    margin-bottom: 25px;
+}
+
+.payment-method {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Khoảng cách giữa nút radio và chữ */
+    cursor: pointer;
+}
+
+.payment-method:hover {
+    background-color: #f9f9f9;
+}
+
+.payment-method input[type="radio"] {
+    flex-shrink: 0;
+    /* Tăng kích thước nút radio cho dễ bấm */
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.payment-method label {
+    flex-grow: 1;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* CSS cho phần chính sách (ví dụ) */
+.policy-section ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.policy-section li {
+    margin-bottom: 10px;
+}
+
+.policy-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== CỘT 3: ĐƠN HÀNG ===== */
+#product-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+.product-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    object-fit: cover;
+}
+
+.product-info {
+    flex-grow: 1;
+}
+
+.product-info p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.95em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-info span {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.product-price {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Mã giảm giá */
+.discount-code {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.discount-code input {
+    flex-grow: 1;
+}
+
+.discount-code button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ffdd00;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.discount-code button:hover {
+    background-color: #ddd;
+}
+
+/* Chi tiết giá */
+.price-details {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+/* Tổng cộng */
+.price-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #333;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.price-total .total-amount {
+    color: #e53935;
+}
+
+/* Nút hành động */
+.action-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-buttons a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.action-buttons a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    background-color: #FF3E00;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 62, 0, 0.2);
+}
+
+.btn-submit:hover {
+    background-color: #cc3200;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 62, 0, 0.3);
+}
+
+/* ===== RESPONSIVE CHO DI ĐỘNG ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .checkout-container {
+        flex-direction: column;
+    }
+
+    .order-summary {
+        order: 1;
+    }
+
+    .shipping-info {
+        order: 2;
+    }
+
+    .payment-policy {
+        order: 3;
+    }
+}
+
+/* ===== CSS CHO TÙY CHỌN VẬN CHUYỂN (MỚI) ===== */
+
+.shipping-section {
+    margin-bottom: 25px;
+}
+
+.shipping-method {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.shipping-method:hover {
+    background-color: #f9f9f9;
+}
+
+.shipping-method input[type="radio"] {
+    flex-shrink: 0;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 2px;
+    align-self: flex-start;/
+}
+
+.shipping-method label {
+    flex-grow: 1;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.shipping-method label span {
+    flex-grow: 1;
+    line-height: 1.4;
+}
+
+
+.shipping-method label strong {
+    font-weight: 600;
+    white-space: nowrap;
+    color: #333;
+}

@@ -1,0 +1,106 @@
+/* ===== ICON + TEXT ===== */
+.category {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  /* NGANG HÀNG NHAU */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* Thêm khoảng cách ngang */
+  transition: .2s;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eaedf2;
+}
+
+/* Icon ảnh (Giày) */
+.category img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Icon Font Awesome (Găng tay, Phụ kiện, Tất cả) */
+.category i {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+
+/* Hover đẹp hơn */
+.category:hover {
+  transform: scale(1.12);
+  opacity: .95;
+}
+
+/* === DROPDOWN === */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.btn-huongdan {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  height: 100%;
+  line-height: 1.4;
+  padding: 5px 12px;
+}
+
+.btn-huongdan::after {
+  content: "▼";
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.dropdown:hover .btn-huongdan::after {
+  transform: rotate(180deg);
+}
+
+/* === DROPDOWN CONTENT (HƯỚNG DẪN) === */
+.dropdown-content-huongdan {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1000;
+  transform: translateY(-3px);
+  transition: all 0.2s ease;
+}
+
+.dropdown-content-huongdan a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.dropdown-content-huongdan a:hover {
+  background: #ffec8d;
+}
+
+/* ✅ Hover chỉ cho HƯỚNG DẪN, không ảnh hưởng USER */
+.dropdown:hover .dropdown-content-huongdan {
+  display: block;
+  transform: translateY(0);
+}

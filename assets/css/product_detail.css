@@ -1,0 +1,251 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .product-detail {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .product-detail .left img {
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-detail .right {
+            flex: 1;
+        }
+
+        .product-detail h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 22px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .masp,
+        .status {
+            margin: 10px 0;
+        }
+
+        .size button {
+            margin: 4px;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            color: #111;
+            cursor: pointer;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.2s;
+            min-width: 45px;
+        }
+
+        .size button:hover {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .qty {
+            margin: 20px 0;
+        }
+
+        .qty b {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #111;
+            letter-spacing: 0.5px;
+        }
+
+        .qty-controls {
+            display: inline-flex;
+            align-items: center;
+            background: #f0f2f5;
+            border-radius: 8px;
+            padding: 5px;
+            margin-top: 10px;
+            border: 1px solid #eaedf2;
+        }
+
+        .qty-controls button {
+            width: 35px !important;
+            height: 35px !important;
+            padding: 0 !important;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            background: #fff !important;
+            color: #111 !important;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            transform: none !important;
+        }
+
+        .qty-controls button:hover {
+            background: #111 !important;
+            color: #fff !important;
+        }
+
+        .qty-controls input {
+            text-align: center;
+            width: 50px !important;
+            height: 35px !important;
+            padding: 0 !important;
+            border: none !important;
+            background: transparent !important;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 5px !important;
+            box-shadow: none !important;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .add-to-cart-btn,
+        .buy-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .add-to-cart-btn {
+            background-color: #333;
+            color: white;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #000;
+        }
+
+        .buy-btn {
+            background-color: #dc2727;
+            color: black;
+        }
+
+        .buy-btn:hover {
+            background-color: #940e0efe;
+        }
+
+        .product-detail {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .product-detail .left {
+            flex: 1;
+        }
+
+        .product-detail .right {
+            flex: 1.2;
+        }
+
+        .product-detail .info-right {
+            flex: 0.8;
+            border-left: 1px solid #eee;
+            padding-left: 20px;
+        }
+
+        .info-right .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .info-right .info-item img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .info-right .info-item b {
+            font-size: 14px;
+            display: block;
+        }
+
+        .info-right .info-item p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .size-btn.active {
+            border: 2px solid #000;
+            font-weight: 700;
+            transform: scale(1.05);
+        }
+
+        .product-buttons form {
+            display: flex;
+            gap: 12px;
+            /* khoảng cách giữa 2 nút */
+            margin-top: 15px;
+        }
+
+        .btn-add-cart,
+        .btn-buy-now {
+            flex: 1;
+            /* mỗi nút chiếm 50% */
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* THÊM VÀO GIỎ */
+        .btn-add-cart {
+            background: #222;
+            color: #fff;
+            border: none;
+        }
+
+        /* MUA NGAY */
+        .btn-buy-now {
+            background: #ff2b2b;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        .btn-buy-now:hover {
+            background: #940e0efe;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        /* SIZE DISABLED */
+        .size-btn.disabled {
+            background: #fdfdfd !important;
+            color: #ccc !important;
+            border: 1px dashed #ddd !important;
+            cursor: not-allowed !important;
+            opacity: 0.6;
+            transform: none !important;
+            box-shadow: none !important;
+        }

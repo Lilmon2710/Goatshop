@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #FF3E00; 
+    --primary-dark: #cc3200;
+    --secondary: #111111;
+    --text-dark: #1f1f1f;
+    --text-light: #777777;
+    --bg-light: #f5f7fa;
+    --bg-card: #ffffff;
+    --border: #eaedf2;
+    --shadow-sm: 0 4px 20px rgba(0,0,0,0.03);
+    --shadow-md: 0 10px 40px rgba(0,0,0,0.08);
+    --shadow-hover: 0 20px 50px rgba(255, 62, 0, 0.15);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: var(--primary);
+    color: #fff;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+.footer {
+    text-align: center;
+    padding: 50px 15px;
+    background: var(--bg-card);
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+/* Global Button Polish */
+.btn, button, input[type="submit"] {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--primary); color: #fff;
+    padding: 12px 28px; border-radius: 50px;
+    text-decoration: none; font-weight: 600; letter-spacing: 0.5px;
+    transition: var(--transition); border: none; cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover {
+    background: var(--primary-dark); transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 62, 0, 0.3); color: #fff;
+}
+
+/* Global Input Polish */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select {
+    padding: 14px 20px; border: 2px solid transparent; background: #f0f2f5;
+    border-radius: 12px; font-family: 'Outfit', sans-serif;
+    transition: var(--transition); font-size: 15px; width: 100%; box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none; background: #fff; border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 62, 0, 0.1);
+}
